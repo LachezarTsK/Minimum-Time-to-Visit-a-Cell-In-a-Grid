@@ -7,15 +7,19 @@ using namespace std;
 class Solution {
 
     struct Point {
-        int row;
-        int column;
+        int row{};
+        int column{};
+
+        Point() = default;
         Point(int row, int column) : row{row}, column{column}{}
     };
 
     struct Step {
-        int row;
-        int column;
-        int time;
+        int row{};
+        int column{};
+        int time{};
+
+        Step() = default;
         Step(int row, int column, int time) : row{row}, column{column}, time{time}{}
     };
 
