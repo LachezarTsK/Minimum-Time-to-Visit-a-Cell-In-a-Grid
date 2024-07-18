@@ -29,6 +29,7 @@ function dijkstraSearchForMinTimeFromStartToGoal(matrix, start, goal) {
     }
 
     // PriorityQueue<Step>
+    // const {MinPriorityQueue} = require('@datastructures-js/priority-queue');
     const minHeapForTime = new MinPriorityQueue({compare: (x, y) => x.time - y.time});
     minHeapForTime.enqueue(new Step(start.row, start.column, 0));
 
