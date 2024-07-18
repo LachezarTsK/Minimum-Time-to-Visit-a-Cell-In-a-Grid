@@ -4,30 +4,8 @@ using System.Collections.Generic;
 
 public class Solution
 {
-    private struct Point
-    {
-        public int row;
-        public int column;
-        public Point(int row, int column)
-        {
-            this.row = row;
-            this.column = column;
-        }
-    }
-
-    private struct Step
-    {
-        public int row;
-        public int column;
-        public int time;
-
-        public Step(int row, int column, int time)
-        {
-            this.row = row;
-            this.column = column;
-            this.time = time;
-        }
-    }
+    private record Point (int row, int column) {}
+    private record Step(int row, int column, int time) {}
 
     private static readonly int CAN_NOT_REACH_GOAL = -1;
     private static readonly int[][] moves = new int[4][]
